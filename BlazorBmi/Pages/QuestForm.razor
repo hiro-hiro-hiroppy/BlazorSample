@@ -1,0 +1,79 @@
+﻿@page "/quest"
+
+<h3>質問フォーム</h3>
+
+<div class="form-group">
+    <label for="zipcode">郵便番号</label>
+    <input @bind="zipCode" class="form-control" />
+</div>
+<div class="form-group">
+    <label for="prefecture">都道府県</label>
+    <select @bind="prefecture" class="form-control">
+        @foreach (var it in prefectureList)
+        {
+            <option value="@it.ID">@it.Name</option>
+        }
+    </select>
+</div>
+<div class="form-group">
+    <label for="telephone">電話番号</label>
+    <input @bind="telephone" class="form-control" />
+</div>
+<div class="form-group">
+    <label for="name">名前</label>
+    <input @bind="name" class="form-control" />
+</div>
+<div class="form-group">
+    <label for="age">年齢</label>
+    <input type="number" @bind="age" class="form-control" />
+</div>
+<div class="form-group">
+    <div>好きなプログラム言語</div>
+    <div class="form-check form-check-inline">
+        <input type="checkbox" @bind="likes[0]" class="form-check-input" />
+        <label class="form-check-label" for="likecsharp">C#</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="checkbox" @bind="likes[1]" class="form-check-input" />
+        <label class="form-check-label" for="likevb">VB</label>
+    </div>
+</div>
+
+<button class="btn btn-primary" @onclick="onSubmit">登録</button> 
+<div style="margin-top: 20px">
+    @Message
+</div>
+
+
+@code {
+    private string zipCode { get; set; } = string.Empty;
+    private string prefecture { get; set; } = string.Empty;
+    private string telephone { get; set; } = string.Empty;
+    private string name { get; set; } = string.Empty;
+    private int age { get; set; }
+
+    private int prefectureId { get; set; }
+    private string prefectureName => prefecture;
+
+    private string Message { get; set; } = string.Empty;
+
+    public void onSubmit()
+    {
+        this.Message = $"{name}さん、登録をありがとうございました。";
+    }
+
+    private class PrefectureItem
+    {
+        public int ID { get; set; }
+        public string Name { get; set; } = string.Empty;
+    }
+
+    private List<PrefectureItem> prefectureList = new List<PrefectureItem>
+    {
+        new PrefectureItem { ID=1, Name="北海道" },
+        new PrefectureItem { ID=2, Name="青森県" },
+        new PrefectureItem { ID=3, Name="岩手県" },
+    };
+
+    private bool[] likes { get; set; } = new bool[2];
+}

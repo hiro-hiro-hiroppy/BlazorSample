@@ -1,0 +1,29 @@
+﻿@page "/simpleone"
+
+<h3>シンプルなバインド</h3>
+
+<div class="form-group">
+    <label class="col-form-label">タイトルを入力</label>
+    <input @bind="Title" class="form-control" />
+</div>
+
+<div>
+    <label class="col-form-label">フォーカスが外れた時に更新</label>
+    <div>@Title</div>
+</div>
+
+<div class="form-group">
+    <label class="col-form-label">タイトルを入力</label>
+    @*バインド先の変数を更新するタイミングをoninputに切り替える*@
+    <input @bind="Title2" @bind:event="oninput" class="form-control" />
+</div>
+
+<div>
+    <label class="col-form-label">随時更新</label>
+    <div>@Title2</div>
+</div>
+
+@code {
+    private string Title { get; set; } = string.Empty;
+    private string Title2 { get; set; } = string.Empty;
+}
