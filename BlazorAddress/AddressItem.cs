@@ -1,5 +1,5 @@
 ﻿using System;
-namespace BlazorBmi
+namespace BlazorAddress
 {
     public class AddressItem
     {

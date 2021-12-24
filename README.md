@@ -31,4 +31,10 @@ $ dotnet --name [プロジェクト名] new blazorwasm
 $ dotnet --name [プロジェクト名] new blazorserver
 ```
 
-# 6までやる
+
+
+
+
+
+
+

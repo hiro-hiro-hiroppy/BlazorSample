@@ -5,7 +5,7 @@
 <div>
     体重を入力：<input type="number" @bind="Weight" />
 </div>
-<BlazorBmi.Components.BmiChild2 @bind-Weight="Weight"></BlazorBmi.Components.BmiChild2>
+<BlazorBind.Components.BmiChild @bind-Weight="Weight"></BlazorBind.Components.BmiChild>
 
 @code {
     public double Weight { get; set; } = 60;

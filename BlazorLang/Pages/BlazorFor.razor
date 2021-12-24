@@ -1,0 +1,43 @@
+﻿@page "/for"
+
+<h3>繰り返し文の利用</h3>
+
+<table class="table">
+    @foreach(var it in books)
+    {
+    <tr>
+        <td>@it.Title -- 著 @it.Author </td>
+        <td>@it.Price 円 </td>
+        <td>出版社 @it.Publisher</td>
+    </tr>
+    }
+</table>
+
+@code {
+    private List<Book> books = new List<Book>();
+    protected override void OnInitialized()
+    {
+        books.Add(new Book()
+        {
+            Title = "Title1",
+            Author = "Author1",
+            Price = 1000,
+            Publisher = "Publisher1"
+        });
+        books.Add(new Book()
+        {
+            Title = "Title2",
+            Author = "Author2",
+            Price = 2000,
+            Publisher = "Publisher2"
+        });
+        books.Add(new Book()
+        {
+            Title = "Title3",
+            Author = "Author3",
+            Price = 3000,
+            Publisher = "Publisher3"
+        });
+    }
+}
+

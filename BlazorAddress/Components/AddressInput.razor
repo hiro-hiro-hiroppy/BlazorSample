@@ -48,11 +48,11 @@
     private int age { get; set; }
 
     [Parameter]
-    public EventCallback<BlazorBmi.AddressItem> OnCommit { get; set; }
+    public EventCallback<BlazorAddress.AddressItem> OnCommit { get; set; }
 
     public void onCommit()
     {
-        var addr = new BlazorBmi.AddressItem
+        var addr = new BlazorAddress.AddressItem
         {
             ZipCode = zipCode,
             Prefecture = prefecture,
