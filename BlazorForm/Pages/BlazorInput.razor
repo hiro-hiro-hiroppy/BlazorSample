@@ -1,0 +1,86 @@
+﻿@page "/form"
+@using System.ComponentModel.DataAnnotations
+
+<h3>EditFOrmを利用する</h3>
+
+<EditForm Model="addressModel" OnValidSubmit="onValidSubmit">
+
+    <div class="form-group">
+        <label for="zipcode">郵便番号</label>
+        <InputText id="zipcode" @bind-Value="addressModel.zipCode" class="form-control"></InputText>
+    </div>
+    <div class="form-group">
+        <label for="prefecture">都道府県</label>
+        <InputSelect id="prefecture" @bind-Value="addressModel.prefecture" class="form-control">
+            @foreach (var it in prefectures)
+            {
+                <option>@it</option>
+            }
+        </InputSelect>
+    </div>
+    <div class="form-group">
+        <label for="name">名前</label>
+        <InputText id="name" @bind-Value="addressModel.name" class="form-control"></InputText>
+    </div>
+    <div class="form-group">
+        <label for="age">年齢</label>
+        <InputNumber id="age" @bind-Value="addressModel.age" class="form-control"></InputNumber>
+    </div>
+    <div class="form-group">
+        <div>訪問日</div>
+        <div class="form-check form-check-inline">
+            <InputCheckbox id="boolvisit" @bind-Value="addressModel.isVisitDate" class="form-check-input"></InputCheckbox>
+            <label class="form-check-label" for="boolvisit">訪問を希望する</label>
+        </div>
+        <InputDate id="visit" @bind-Value="addressModel.visitDate" class="form-control"></InputDate>
+    </div>
+    <button class="btn btn-primary" type="submit">登録</button>
+    <div style="margin-top: 20px">
+        @Message
+    </div>
+
+</EditForm>
+
+@code {
+    public class Address
+    {
+        //private string _zipCode;
+        //public string zipCode
+        //{
+        //    get { return _zipCode; }
+        //    set
+        //    {
+        //        if(value.Length > 7)
+        //        {
+        //            //エラー発生
+        //            throw new Exception("郵便番号は7桁までです");
+        //        }
+        //        else
+        //        {
+        //            _zipCode = value;
+        //        }
+        //    }
+        //}
+        [StringLength(7, ErrorMessage = "郵便番号は7桁までです")]
+        public string zipCode { get; set; }
+        public string prefecture { get; set; }
+        public string telephone { get; set; }
+        public string name { get; set; }
+        public int age { get; set; }
+        public bool isVisitDate { get; set; }
+        public DateTime? visitDate { get; set; }
+    }
+
+    private Address addressModel = new Address();
+    private string Message { get; set; }
+    private void onValidSubmit()
+    {
+        Message = addressModel.name + "さん、登録ありがとうございました.";
+    }
+
+    private string[] prefectures = new string[] {
+        "北海道",
+        "青森県",
+        "岩手県"
+    };
+}

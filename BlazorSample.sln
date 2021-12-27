@@ -1,21 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1700.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorBmi", "BlazorBmi\BlazorBmi.csproj", "{9C3F63E6-2D14-43D5-B9D5-3BBB4BF6E4A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBmi", "BlazorBmi\BlazorBmi.csproj", "{9C3F63E6-2D14-43D5-B9D5-3BBB4BF6E4A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAddress", "BlazorAddress\BlazorAddress.csproj", "{C1A25097-4A12-4BCD-9E56-3372C61AC9AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAddress", "BlazorAddress\BlazorAddress.csproj", "{C1A25097-4A12-4BCD-9E56-3372C61AC9AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorBind", "BlazorBind\BlazorBind.csproj", "{241F786C-2714-4235-B1FF-C21E94436441}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorBind", "BlazorBind\BlazorBind.csproj", "{241F786C-2714-4235-B1FF-C21E94436441}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorLang", "BlazorLang\BlazorLang.csproj", "{D83773BB-6C69-4C5E-B42F-B70AB0F06C52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorLang", "BlazorLang\BlazorLang.csproj", "{D83773BB-6C69-4C5E-B42F-B70AB0F06C52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorForm", "BlazorForm\BlazorForm.csproj", "{B5E98527-DBFC-47C6-8BD7-84830DF2BBE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorForm", "BlazorForm\BlazorForm.csproj", "{B5E98527-DBFC-47C6-8BD7-84830DF2BBE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorClientSide", "BlazorClientSide\BlazorClientSide.csproj", "{E2E03D26-3FA9-4E77-B4C1-75EF78415361}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorClientSide", "BlazorClientSide\BlazorClientSide.csproj", "{E2E03D26-3FA9-4E77-B4C1-75EF78415361}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerSide", "BlazorServerSide\BlazorServerSide.csproj", "{4B5450C2-765E-4524-87B8-E3FA20BFFB04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerSide", "BlazorServerSide\BlazorServerSide.csproj", "{4B5450C2-765E-4524-87B8-E3FA20BFFB04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

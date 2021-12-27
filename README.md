@@ -31,8 +31,19 @@ $ dotnet --name [プロジェクト名] new blazorwasm
 $ dotnet --name [プロジェクト名] new blazorserver
 ```
 
+### 入力コンポーネント
 
-# ８章はめんどくさいから一旦スルー
+EditFormで使用する入力コンポーネントの一覧を表示
+
+|入力コンポーネント|HTMLタグ|
+|---|---|
+|InputText|<input type="text">|
+|InputSelect|<select>|
+|InputNumber|<input type="number">|
+|InputCheckbox|<input type="checkbox">|
+|InputDate|<input type="date">|
+|INputTextArea|<textarea>|
+
 # 9,10章はやる
 # 11章はやらなくてOK
 
