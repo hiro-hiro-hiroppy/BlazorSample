@@ -11,10 +11,10 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 
-////’Ç‰Á
-//builder.Services.AddDbContextFactory<_MyDbContext>(
-//    options => options.UseSqlServer(builder.Configuration.GetConnectionString("DBConnection"))
-//);
+//’Ç‰Á
+builder.Services.AddDbContextFactory<_MyDbContext>(
+    options => options.UseSqlServer(builder.Configuration.GetConnectionString("DBConnection"))
+);
 
 var app = builder.Build();
 

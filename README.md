@@ -43,12 +43,3 @@ EditFormで使用する入力コンポーネントの一覧を表示
 |InputCheckbox|<input type="checkbox">|
 |InputDate|<input type="date">|
 |INputTextArea|<textarea>|
-
-# 9,10章はやる
-# 11章はやらなくてOK
-
-
-
-
-
-

@@ -31,7 +31,10 @@ namespace BlazorSv.Entity
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //SQLServer接続設定
-            optionsBuilder.UseSqlServer("Data Source=localhost; Persist Security Info=True;User ID=sa;Password=saPassword1234");
+            var appSettingsJson = AppSettingsJson.GetAppSettings();
+            var connectionString = appSettingsJson["ConnectionStrings:DBConnection"];
+            //optionsBuilder.UseSqlServer("Data Source=localhost; Persist Security Info=True;User ID=sa;Password=saPassword1234");
+            optionsBuilder.UseSqlServer(connectionString);
             //base.OnConfiguring(optionsBuilder);
         }
     }
